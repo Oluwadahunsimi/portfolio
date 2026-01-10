@@ -5,9 +5,9 @@
   "description": "Personal portfolio website",
   "scripts": {
     "start": "npx http-server . -p 8080",
-    "dev": "vite --root portfolio",
-    "build": "vite build portfolio",
-    "preview": "vite preview --root portfolio"
+    "dev": "(cd portfolio && npm run dev)",
+    "build": "cd portfolio && npm install --no-audit --no-fund && npm run build",
+    "preview": "(cd portfolio && npm run preview)"
   },
   "main": "index.js",
   "author": "",
