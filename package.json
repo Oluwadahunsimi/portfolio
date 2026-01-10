@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx http-server . -p 8080",
     "dev": "vite porfolio",
-    "build": "vite build porfolio",
+    "build": "vite build porfolio --outDir public",
     "preview": "vite preview porfolio"
   },
   "main": "index.js",
