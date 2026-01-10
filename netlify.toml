@@ -1,11 +1,11 @@
 [build]
+  # Publish the static `portfolio/` folder directly so Netlify serves your
+  # existing `portfolio/index.html` instead of the Next.js build output.
   base = "portfolio"
-  command = "npm install && npm run build"
-  # publish must be relative to `base`, set to the .next directory created by Next
-  publish = ".next"
+  # No build step required for the static site. Keep a no-op command so
+  # Netlify still runs the deploy workflow.
+  command = "echo 'publishing static portfolio folder'"
+  # Publish the contents of the `portfolio/` folder (relative to base)
+  publish = "."
 
-[build.environment]
-  NODE_VERSION = "20"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Removed the Next.js plugin so Netlify will serve the static files directly.
