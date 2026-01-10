@@ -1,28 +1,15 @@
 {
-  "name": "portfolio",
+  "name": "live-server",
   "version": "1.0.0",
   "private": true,
   "description": "Personal portfolio website",
-"scripts": {
-  "start": "npx http-server . -p 8080",
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-}
-,
+  "scripts": {
+    "start": "npx http-server . -p 8080",
+    "dev": "vite --root portfolio",
+    "build": "vite build portfolio",
+    "preview": "vite preview --root portfolio"
+  },
   "main": "index.js",
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@vitejs/plugin-react": "^5.1.2",
-    "autoprefixer": "^10.4.23",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18",
-    "vite": "^7.3.0"
-  },
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
-  }
+  "license": "ISC"
 }
