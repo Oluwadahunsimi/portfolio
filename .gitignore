@@ -1,0 +1,7 @@
+node_modules/
+portfolio/node_modules/
+.next/
+dist/
+/.vercel
+npm-debug.log*
+.DS_Store
