@@ -1,7 +1,8 @@
 [build]
   base = "portfolio"
   command = "npm install && npm run build"
-  publish = "portfolio/.next"
+  # publish must be relative to `base`, set to the .next directory created by Next
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
