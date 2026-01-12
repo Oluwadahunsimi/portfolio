@@ -564,6 +564,14 @@
             }
         }
 
+        /* On very small screens (phones), hide the certificate image so it doesn't break layout;
+           text/content below the image will remain visible. */
+        @media (max-width: 480px) {
+            .certificate-image {
+                display: none !important;
+            }
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
