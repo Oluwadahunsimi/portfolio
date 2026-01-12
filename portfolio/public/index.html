@@ -539,36 +539,12 @@
                 display: flex;
             }
 
-            /* When menu is open, transform the three bars into an X */
-            .menu-toggle.open span:nth-child(1) {
-                transform: translateY(6px) rotate(45deg);
-            }
-            .menu-toggle.open span:nth-child(2) {
-                opacity: 0;
-            }
-            .menu-toggle.open span:nth-child(3) {
-                transform: translateY(-6px) rotate(-45deg);
-            }
-
-            /* Hide certificate images on small screens only when the mobile menu is open */
-            body.menu-open .certificate-image {
-                display: none;
-            }
-
             .timeline {
                 padding-left: 1.5rem;
             }
 
             .timeline-item::before {
                 left: -2rem;
-            }
-        }
-
-        /* On very small screens (phones), hide the certificate image so it doesn't break layout;
-           text/content below the image will remain visible. */
-        @media (max-width: 480px) {
-            .certificate-image {
-                display: none !important;
             }
         }
 
@@ -737,7 +713,7 @@
     <nav>
         <div class="container">
             <div class="logo">ODJ</div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-pressed="false">
+            <button class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -761,7 +737,7 @@
             <div class="contact-links">
                 <a href="tel:+2347011253440">+234 701 125 3440</a>
                 <a href="mailto:olalerejoseph143@gmail.com">olalerejoseph143@gmail.com</a>
-               <a href="https://www.linkedin.com/in/dahunsimi-olalere" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/dahunsimi-olalere" target="_blank">LinkedIn</a>
                 <a href="https://github.com/Oluwadahunsimi" target="_blank">GitHub</a>
             </div>
             <div class="cta-buttons">
@@ -940,23 +916,86 @@
                 </div>
             </div>
 
-            <!-- Flowva Hub: moved from 'Current Assessment' into Projects list as a project worked on -->
-            <div class="project-card">
-                <h3>Flowva Hub — Project I Worked On</h3>
-                <p>A project I worked on: recreation and UI improvements for the Flowva Hub Rewards page. Live site linked below.</p>
-                <div class="project-links">
-                    <a href="https://www.flowvahub.com" target="_blank" rel="noopener noreferrer" class="project-link">
-                        <span>View Live Site</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                        </svg>
-                    </a>
+            <h2 style="margin-top: 4rem;">Current Assessment</h2>
+
+            <div class="project-card assessment-card">
+                <h3>Flowva Hub Rewards Page Recreation</h3>
+                <p>Technical assessment to recreate the Rewards page with perfect UI, correct functionality, clean
+                    architecture, and proper data handling.</p>
+
+                <div class="assessment-details">
+                    <h4>Assessment Requirements:</h4>
+                    <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--accent-color); font-weight: 600;">✓</span>
+                            Perfect UI recreation of <a href="https://www.flowvahub.com" target="_blank"
+                                rel="noopener noreferrer"
+                                style="color: var(--accent-color); text-decoration: none;">flowvahub.com</a> Rewards
+                            page
+                        </li>
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--accent-color); font-weight: 600;">✓</span>
+                            Real and meaningful use of Supabase (auth, database, queries)
+                        </li>
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--accent-color); font-weight: 600;">✓</span>
+                            Solid React fundamentals and component structure
+                        </li>
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--accent-color); font-weight: 600;">✓</span>
+                            Proper handling of loading, empty, and error states
+                        </li>
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--accent-color); font-weight: 600;">✓</span>
+                            Clean, readable, and well-structured code
+                        </li>
+                    </ul>
+
+                    <h4 style="margin-top: 2rem;">Deliverables:</h4>
+                    <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--text-primary); font-weight: 600;">▸</span>
+                            GitHub repository with complete source code
+                        </li>
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--text-primary); font-weight: 600;">▸</span>
+                            Deployed live page URL
+                        </li>
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--text-primary); font-weight: 600;">▸</span>
+                            Clear setup instructions in README
+                        </li>
+                        <li
+                            style="padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-secondary);">
+                            <span
+                                style="position: absolute; left: 0; color: var(--text-primary); font-weight: 600;">▸</span>
+                            Documentation of assumptions and trade-offs
+                        </li>
+                    </ul>
                 </div>
+
                 <div class="tags">
-                    <span class="tag">UI</span>
-                    <span class="tag">React</span> 
-                    <span class="tag">Frontend</span>
-                    <span class="tag">Worked On</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Supabase</span>
+                    <span class="tag">Authentication</span>
+                    <span class="tag">Database Design</span>
+                    <span class="tag">UI/UX</span>
                 </div>
             </div>
         </div>
@@ -972,7 +1011,7 @@
                         <h3>Software Developer</h3>
                         <p class="company">The Incubator Hub</p>
                     </div>
-                    <span class="timeline-date">February 2025 – December 2025</span>
+                    <span class="timeline-date">February 2025 – Present</span>
                 </div>
                 <ul>
                     <li>Developed and manipulated LMS (Learning Management System) for 100,000+ students, ensuring
@@ -1183,26 +1222,12 @@
 
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            // Toggle visual state (hamburger -> X)
-            menuToggle.classList.toggle('open');
-            // Toggle body state so we can hide/show other page elements (like certificate) when menu is open
-            document.body.classList.toggle('menu-open');
-            // Update accessible label
-            if (menuToggle.classList.contains('open')) {
-                menuToggle.setAttribute('aria-label', 'Close menu');
-                menuToggle.setAttribute('aria-pressed', 'true');
-            } else {
-                menuToggle.setAttribute('aria-label', 'Open menu');
-                menuToggle.setAttribute('aria-pressed', 'false');
-            }
         });
 
         // Close menu when clicking on a link
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                menuToggle.classList.remove('open');
-                document.body.classList.remove('menu-open');
             });
         });
 
@@ -1285,6 +1310,5 @@
         });
     </script>
 </body>
-
 
 </html>
